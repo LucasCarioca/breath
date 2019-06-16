@@ -35,7 +35,7 @@ class Counter extends Component {
                     <CardContent>
                         <h3>Breaths: {this.state.breath}</h3>
                         <h4>Timer: {this.state.countDown}s {this.state.started? 'running' : null}</h4>
-                        <Button variant={'outlined'} color={'primary'} className={'breathButton'} onClick={this.breath.bind(this)}><FavoriteIcon fontSize={'large'}/></Button>
+                        <Button variant={'contained'} color={'primary'} className={'breathButton'} onClick={this.breath.bind(this)}><FavoriteIcon fontSize={'large'}/></Button>
                     </CardContent>
                 </Card>
             </Container>
