@@ -1,6 +1,15 @@
-const defaultState = {
-    breathRecords: []
-};
+const startingState = loadState();
+
+function loadState() {
+    let defaultState = {
+        breathRecords: []
+    };
+    let savedState = JSON.parse(localStorage.getItem('breath-state'));
+    if (savedState != null || savedState != undefined) {
+        return savedState
+    }
+    return defaultState
+}
 
 export const mapStateToProps = state => {
   return {
@@ -19,14 +28,16 @@ export const mapDispatchToProps = dispatch => {
     }
 };
 
-const reducer = (state = defaultState, action) => {
+const reducer = (state = startingState, action) => {
   if (action.type === 'ADDBREATHRECORD') {
       let breathRecords = state.breathRecords;
       breathRecords.push(action.payload.breathRecord);
-      return {
+      let newState = {
           ...state,
           breathRecords: breathRecords
-      }
+      };
+      localStorage.setItem('breath-state', JSON.stringify(newState));
+      return newState;
   }
 
   return state;
