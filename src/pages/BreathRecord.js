@@ -1,0 +1,42 @@
+import React, {Component} from 'react';
+import {connect} from "react-redux";
+import {mapDispatchToProps, mapStateToProps} from "../store/reducer";
+import Container from "@material-ui/core/Container";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+
+class BreathRecord extends Component {
+    render() {
+        let breathRecords = this.props.breathRecords.reverse().map(record => {
+            return (
+                <Card raised={true}>
+                    <CardContent>
+                        <Table>
+                            <TableHead>
+                                <TableCell align={'left'}>Date & Time</TableCell>
+                                <TableCell align={'left'}>BPM</TableCell>
+                            </TableHead>
+
+                            <TableBody>
+                                <TableCell align={'left'}>{record.time}</TableCell>
+                                <TableCell align={'left'}>{record.bpm}</TableCell>
+                            </TableBody>
+                        </Table>
+                    </CardContent>
+                </Card>
+            )
+        });
+        return (
+            <Container maxWidth={'lg'}>
+                <h1 className={'title'}>Breath record</h1>
+                {this.props.breathRecords.length > 0? breathRecords: null}
+            </Container>
+        )
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BreathRecord);

@@ -1,4 +1,9 @@
+html {
+  height: 100%;
+}
 body {
+  background: lightslategray;
+  min-height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -7,7 +12,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.bottomNav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.title {
+  color: white;
+  text-shadow: 2px 2px #666666;
+}
+
+.breathButton {
+  width: 100%;
+  height: 150px;
+}
+
+.counterCard {
+  height: 100%;
 }
