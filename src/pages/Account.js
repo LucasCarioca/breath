@@ -11,7 +11,7 @@ class Account extends Component {
         return (
             <Container>
                 <h1 className={'title'}>Account</h1>
-                <Card>
+                <Card raised={true}>
                     <CardContent>
                         <p>Your data is only stored locally on your device. There is no information being sent back to our servers. If you would like to erase the data that this app is storing locally on your device click the Forget me button below.</p>
                         <Button variant={'outlined'} color={'secondary'} onClick={this.clearLocalStorage.bind(this)}>Forget Me</Button>
