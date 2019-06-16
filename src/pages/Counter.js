@@ -11,7 +11,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
 
-class CounterPage extends Component {
+class Counter extends Component {
 
     state = {
         countDown: 30,
@@ -78,4 +78,4 @@ class CounterPage extends Component {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CounterPage);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

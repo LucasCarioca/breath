@@ -24,6 +24,10 @@ export const mapDispatchToProps = dispatch => {
             payload: {
                 breathRecord: breathRecord
             }
+        }),
+        clearState: breathRecord => dispatch({
+            type: 'CLEARSTATE',
+            payload: {}
         })
     }
 };
@@ -37,6 +41,11 @@ const reducer = (state = startingState, action) => {
           breathRecords: breathRecords
       };
       localStorage.setItem('breath-state', JSON.stringify(newState));
+      return newState;
+  }
+  if (action.type === 'CLEARSTATE') {
+      localStorage.clear();
+      let newState = loadState();
       return newState;
   }
 

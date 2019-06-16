@@ -23,24 +23,28 @@ class BreathRecord extends Component {
         return (
             <Container maxWidth={'lg'}>
                 <h1 className={'title'}>Breath record</h1>
-                {this.props.breathRecords.length > 0? (
-                    <Card raised={true}>
-                        <CardContent>
-                            <Table>
-                                <TableHead>
-                                    <TableRow>
-                                        <TableCell align={'left'}>Date & Time</TableCell>
-                                        <TableCell align={'left'}>BPM</TableCell>
-                                    </TableRow>
-                                </TableHead>
 
-                                <TableBody>
-                                    {breathRecords}
-                                </TableBody>
-                            </Table>
-                        </CardContent>
-                    </Card>
-                ): null}
+                <Card raised={true}>
+                    <CardContent>
+                        {this.props.breathRecords.length > 0? (
+                                    <Table>
+                                        <TableHead>
+                                            <TableRow>
+                                                <TableCell align={'left'}>Date & Time</TableCell>
+                                                <TableCell align={'left'}>BPM</TableCell>
+                                            </TableRow>
+                                        </TableHead>
+
+                                        <TableBody>
+                                            {breathRecords}
+                                        </TableBody>
+                                    </Table>
+                        ): (
+                            <p>No recent breath records to show. Please go to the counter page to start tracking.</p>
+                        )}
+
+                    </CardContent>
+                </Card>
             </Container>
         )
     }

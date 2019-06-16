@@ -8,6 +8,7 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import {makeStyles} from "@material-ui/core/styles";
 import {BrowserRouter as Router, Link} from "react-router-dom";
 import Routes from "./Routes";
@@ -50,6 +51,7 @@ function App() {
                             >
                                 <BottomNavigationAction label="Counter" icon={<FavoriteIcon />} component={Link} to={'/'}/>
                                 <BottomNavigationAction label="Recents" icon={<RestoreIcon />} component={Link} to={'/record'} />
+                                <BottomNavigationAction label="Account" icon={<AccountCircleIcon />} component={Link} to={'/account'} />
                             </BottomNavigation>
                         </AppBar>
                     </Container>
