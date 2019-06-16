@@ -5,7 +5,7 @@ function loadState() {
         breathRecords: []
     };
     let savedState = JSON.parse(localStorage.getItem('breath-state'));
-    if (savedState != null || savedState != undefined) {
+    if (savedState != null || savedState !== undefined) {
         return savedState
     }
     return defaultState
@@ -25,7 +25,7 @@ export const mapDispatchToProps = dispatch => {
                 breathRecord: breathRecord
             }
         }),
-        clearState: breathRecord => dispatch({
+        clearState: () => dispatch({
             type: 'CLEARSTATE',
             payload: {}
         })
@@ -45,8 +45,7 @@ const reducer = (state = startingState, action) => {
   }
   if (action.type === 'CLEARSTATE') {
       localStorage.clear();
-      let newState = loadState();
-      return newState;
+      return loadState();
   }
 
   return state;
