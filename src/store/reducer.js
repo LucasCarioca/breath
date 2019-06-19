@@ -4,8 +4,9 @@ function loadState() {
     let defaultState = {
         breathRecords: []
     };
-    let savedState = JSON.parse(localStorage.getItem('breath-state'));
-    if (savedState != null || savedState != undefined) {
+    let savedState =  null;
+    savedState = JSON.parse(localStorage.getItem('breath-state'));
+    if (savedState != null) {   
         return savedState
     }
     return defaultState
