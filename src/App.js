@@ -28,7 +28,8 @@ const useStyles = makeStyles({
 
 const paths = [
     '/',
-    '/record'
+    '/record',
+    '/account'
 ];
 
 function App() {
