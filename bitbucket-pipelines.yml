@@ -1,0 +1,31 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+pipelines:
+  default:
+    - step:
+        name: setup
+        caches:
+          - node
+        script: 
+          - npm install
+          - apt-get update
+          - wget -O /tmp/cf-cli.tgz “https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.27.0" #current version of cli is 6.27.0
+          - ls -alF /tmp/
+          - mkdir -p /usr/local/bin
+          - tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+          - cf — version
+    - step: 
+        name: deploy
+        deployment: staging
+        script: 
+          - cf login -o lucasdesouza -s development -a https://api.run.pivotal.io -u $PIVOTAL_USERNAME -p $PIVOTAL_PASSWORD
+          - cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
+          - cf install-plugin blue-green-deploy   -r CF-Community -f
+          - pwd
+          - ls -alF
+          - cf blue-green-deploy srve-api -f manifest.yml
