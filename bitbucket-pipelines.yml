@@ -16,11 +16,9 @@ pipelines:
     - step: 
         name: install cf cli
         script:
-          - apt-get install apt-transport-https ca-certificates
-          - wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key |  apt-key add -
-          - echo "deb https://packages.cloudfoundry.org/debian stable main" | tee /etc/apt/sources.list.d/cloudfoundry-cli.list
-          - apt-get update
-          - apt-get install cf-cli
+          - curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
+          - mv cf /usr/local/bin
+          - sudo curl -o /usr/share/bash-completion/completions/cf https://raw.githubusercontent.com/cloudfoundry/cli/master/ci/installers/completion/cf
           - cf — version
     - step: 
         name: deploy
