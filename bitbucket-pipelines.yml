@@ -18,7 +18,8 @@ pipelines:
           #- ls -alF /tmp/
           #- mkdir -p /usr/local/bin
           #- tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
-          - dpkg -i path/to/cf-cli-*.deb && apt-get install -f
+          - https://cli.run.pivotal.io/stable?release=debian64&source=github
+          - dpkg -i cf-cli-*.deb && apt-get install -f
           - cf — version
     - step: 
         name: deploy
