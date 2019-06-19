@@ -14,10 +14,11 @@ pipelines:
         script: 
           - npm install
           - apt-get update
-          - wget -O /tmp/cf-cli.tgz “https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.27.0" #current version of cli is 6.27.0
-          - ls -alF /tmp/
-          - mkdir -p /usr/local/bin
-          - tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+          #- wget -O /tmp/cf-cli.tgz “https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.27.0" #current version of cli is 6.27.0
+          #- ls -alF /tmp/
+          #- mkdir -p /usr/local/bin
+          #- tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
+          - dpkg -i path/to/cf-cli-*.deb && apt-get install -f
           - cf — version
     - step: 
         name: deploy
