@@ -23,4 +23,4 @@ pipelines:
           - cf install-plugin blue-green-deploy   -r CF-Community -f
           - pwd
           - ls -alF
-          - cf blue-green-deploy srve-api -f manifest.yml
+          - cf blue-green-deploy -f manifest.yml
