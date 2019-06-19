@@ -9,21 +9,15 @@ pipelines:
   default:
     - step:
         name: build
+        deployment: staging
         caches:
           - node
         script: 
           - npm install
-    - step: 
-        name: install cf cli
-        script:
           - curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
           - mv cf /usr/local/bin
           - curl -o /usr/share/bash-completion/completions/cf https://raw.githubusercontent.com/cloudfoundry/cli/master/ci/installers/completion/cf
           - cf -v
-    - step: 
-        name: deploy
-        deployment: staging
-        script: 
           - cf login -o lucasdesouza -s development -a https://api.run.pivotal.io -u $PIVOTAL_USERNAME -p $PIVOTAL_PASSWORD
           - cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org
           - cf install-plugin blue-green-deploy   -r CF-Community -f
