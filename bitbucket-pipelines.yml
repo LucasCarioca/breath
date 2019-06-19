@@ -8,19 +8,16 @@ image: node:10.15.3
 pipelines:
   default:
     - step:
-        name: setup
+        name: build
         caches:
           - node
         script: 
           - npm install
+    - step: 
+        name: install cf cli
+        script:
           - apt-get update
-          #- wget -O /tmp/cf-cli.tgz “https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.27.0" #current version of cli is 6.27.0
-          #- ls -alF /tmp/
-          #- mkdir -p /usr/local/bin
-          #- tar -xzf /tmp/cf-cli.tgz -C /usr/local/bin
-          - curl -O https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.27.0
-          - ls -al
-          - dpkg -i cf-cli-*.deb && apt-get install -f
+          - apt-get install cf-cli
           - cf — version
     - step: 
         name: deploy
