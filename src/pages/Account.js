@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
-import {mapDispatchToProps, mapStateToProps} from "../store/reducer";
-import {connect} from "react-redux";
+import { mapDispatchToProps, mapStateToProps } from "../store/reducer";
+import { connect } from "react-redux";
 
 class Account extends Component {
     render() {

@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import TinyTimer from 'tiny-timer'
-import {connect} from "react-redux";
-import {mapStateToProps, mapDispatchToProps} from "../store/reducer";
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "../store/reducer";
 import moment from "moment";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
@@ -34,8 +34,8 @@ class Counter extends Component {
                 <Card raised={true}>
                     <CardContent>
                         <h3>Breaths: {this.state.breath}</h3>
-                        <h4>Timer: {this.state.countDown}s {this.state.started? 'running' : null}</h4>
-                        <Button variant={'contained'} color={'primary'} className={'breathButton'} onClick={this.breath.bind(this)}><FavoriteIcon fontSize={'large'}/></Button>
+                        <h4>Timer: {this.state.countDown}s {this.state.started ? 'running' : null}</h4>
+                        <Button variant={'contained'} color={'primary'} className={'breathButton'} onClick={this.breath.bind(this)}><FavoriteIcon fontSize={'large'} /></Button>
                     </CardContent>
                 </Card>
             </Container>
@@ -52,19 +52,19 @@ class Counter extends Component {
         }
         this.setState({
             started: started,
-            breath: breath+1
+            breath: breath + 1
         })
     }
 
     countDown() {
         let countDown = this.state.countDown;
         this.setState({
-            countDown: countDown-1
+            countDown: countDown - 1
         });
     };
 
     done() {
-        const bpm = this.state.breath*2;
+        const bpm = this.state.breath * 2;
         bpm >= 30 ? alert(`WARNING: ${bpm} breaths per minute. Please advise you primary veterinarian.`) : alert(`${bpm} breaths per minute.`);
         this.props.addBreathRecord({
             time: moment().format('MM/DD/YYYY hh:mm a'),

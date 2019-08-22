@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import {createStore} from "redux";
+import { createStore } from "redux";
 import reducer from "./store/reducer";
-import {Provider} from "react-redux";
-import {composeWithDevTools} from "redux-devtools-extension";
+import { Provider } from "react-redux";
+import { composeWithDevTools } from "redux-devtools-extension";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import {makeStyles} from "@material-ui/core/styles";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Routes from "./Routes";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
@@ -40,7 +40,7 @@ function App() {
             <Router>
                 <Box height={'100%'}>
                     <Container maxWidth={'sm'}>
-                        <Routes/>
+                        <Routes />
                         <AppBar>
                             <BottomNavigation
                                 value={value}
@@ -50,7 +50,7 @@ function App() {
                                 showLabels
                                 className={classes.root}
                             >
-                                <BottomNavigationAction label="Counter" icon={<FavoriteIcon />} component={Link} to={'/'}/>
+                                <BottomNavigationAction label="Counter" icon={<FavoriteIcon />} component={Link} to={'/'} />
                                 <BottomNavigationAction label="Recents" icon={<RestoreIcon />} component={Link} to={'/record'} />
                                 <BottomNavigationAction label="Account" icon={<AccountCircleIcon />} component={Link} to={'/account'} />
                             </BottomNavigation>

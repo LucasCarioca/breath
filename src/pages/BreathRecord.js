@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {mapDispatchToProps, mapStateToProps} from "../store/reducer";
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { mapDispatchToProps, mapStateToProps } from "../store/reducer";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -26,22 +26,22 @@ class BreathRecord extends Component {
 
                 <Card raised={true}>
                     <CardContent>
-                        {this.props.breathRecords.length > 0? (
-                                    <Table>
-                                        <TableHead>
-                                            <TableRow>
-                                                <TableCell align={'left'}>Date & Time</TableCell>
-                                                <TableCell align={'left'}>BPM</TableCell>
-                                            </TableRow>
-                                        </TableHead>
+                        {this.props.breathRecords.length > 0 ? (
+                            <Table>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell align={'left'}>Date & Time</TableCell>
+                                        <TableCell align={'left'}>BPM</TableCell>
+                                    </TableRow>
+                                </TableHead>
 
-                                        <TableBody>
-                                            {breathRecords}
-                                        </TableBody>
-                                    </Table>
-                        ): (
-                            <p>No recent breath records to show. Please go to the counter page to start tracking.</p>
-                        )}
+                                <TableBody>
+                                    {breathRecords}
+                                </TableBody>
+                            </Table>
+                        ) : (
+                                <p>No recent breath records to show. Please go to the counter page to start tracking.</p>
+                            )}
 
                     </CardContent>
                 </Card>
