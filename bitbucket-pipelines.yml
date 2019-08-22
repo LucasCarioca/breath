@@ -14,6 +14,8 @@ pipelines:
           - node
         script: 
           - SHA=$(git rev-parse HEAD)
+          -
+          - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           - ./build.sh $SHA
         services:
           - docker
