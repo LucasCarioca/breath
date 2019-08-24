@@ -14,8 +14,24 @@ pipelines:
           - node
         script: 
           - SHA=$(git rev-parse HEAD)
-          -
+          - base64 --decode $KEY_FILE > key.json
+          - gcloud version || true
+          - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+          - source $HOME/google-cloud-sdk/path.bash.inc
+          - gcloud version
+          - gcloud components install kubectl
+          - gcloud auth activate-service-account --key-file key.json
+          - gcloud config set project multi-k8s-250201
+          - gcloud config set compute/zone us-central1-a
+          # - gcloud container clusters get-credentials multi-cluster
+          # - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+          # - chmod +x ./kubectl
+          # - sudo mv ./kubectl /usr/local/bin/kubectl
           - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           - ./build.sh $SHA
+          # - kubectl config set-cluster $CLUSTER --server=$KUBE_HOST --certificate-authority=</path/to/ca.pem>
+          # - kubectl config set-credentials <my.user> --username=$KUBERNETES_USERNAME --password=$KUBERNETES_PASSWORD
+          # - kubectl config set-context <my.context> --cluster=<my.cluster.name> --user=<my.user>
+          # - kubectl config use-context <my.context>
         services:
           - docker
