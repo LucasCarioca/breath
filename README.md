@@ -4,6 +4,14 @@
 
 ## Runing application locally
 
+### Basic run
+
+~~~~bash
+npm start
+~~~~
+
+### With Docker
+
 ~~~~bash
 ./run.sh
 ~~~~
