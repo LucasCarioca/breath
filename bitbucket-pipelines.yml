@@ -30,6 +30,7 @@ pipelines:
           # - sudo mv ./kubectl /usr/local/bin/kubectl
           - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           - ./build.sh $SHA
+          - ./deploy.sh $SHA
           # - kubectl config set-cluster $CLUSTER --server=$KUBE_HOST --certificate-authority=</path/to/ca.pem>
           # - kubectl config set-credentials <my.user> --username=$KUBERNETES_USERNAME --password=$KUBERNETES_PASSWORD
           # - kubectl config set-context <my.context> --cluster=<my.cluster.name> --user=<my.user>
