@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: breath-ui-ip
+    networking.gke.io/managed-certificates: breath-certificate
+spec:
+  backend:
+    serviceName: breath-cluster-ip-service
+    servicePort: 80
