@@ -4,6 +4,4 @@ metadata:
   name: breath-certificate
 spec:
   domains:
-    - breathcounter.desouza.engineering
     - desouza.engineering
-    - www.desouza.engineering
