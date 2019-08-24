@@ -18,22 +18,32 @@ spec:
           ports:
             - containerPort: 3000
 ---
-apiVersion: "v1"
-kind: "Service"
+apiVersion: v1
+kind: Service
 metadata:
-  name: "breath-loadbalancer-service"
-  namespace: "default"
-  labels:
-    component: "web"
+  name: breath-nodeport-service
 spec:
+  type: NodePort
   ports:
-  - protocol: "TCP"
-    port: 80
-    targetPort: 3000
-  selector:
-    component: "web"
-  type: "LoadBalancer"
-  loadBalancerIP: "34.95.110.17"
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+# apiVersion: "v1"
+# kind: "Service"
+# metadata:
+#   name: "breath-loadbalancer-service"
+#   namespace: "default"
+#   labels:
+#     component: "web"
+# spec:
+#   ports:
+#   - protocol: "TCP"
+#     port: 80
+#     targetPort: 3000
+#   selector:
+#     component: "web"
+#   type: "LoadBalancer"
+#   loadBalancerIP: "34.95.110.17"
 # apiVersion: v1
 # kind: Service
 # metadata:

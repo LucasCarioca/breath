@@ -7,5 +7,5 @@ metadata:
     networking.gke.io/managed-certificates: breath-certificate
 spec:
   backend:
-    serviceName: breath-loadbalancer-service
+    serviceName: breath-nodeport-service
     servicePort: 80
