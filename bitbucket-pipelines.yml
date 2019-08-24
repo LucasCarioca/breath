@@ -14,7 +14,8 @@ pipelines:
           - node
         script: 
           - SHA=$(git rev-parse HEAD)
-          - base64 --decode $KEY_FILE > key.json
+          - echo $KEY_FILE > encoded-key.txt
+          - base64 --decode encoded-key.txt > key.json
           - gcloud version || true
           - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
           - source $HOME/google-cloud-sdk/path.bash.inc
