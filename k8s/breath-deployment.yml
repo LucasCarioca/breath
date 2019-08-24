@@ -33,6 +33,7 @@ spec:
   selector:
     component: "web"
   type: "LoadBalancer"
+  loadBalancerIP: breath-ip
 # apiVersion: v1
 # kind: Service
 # metadata:
