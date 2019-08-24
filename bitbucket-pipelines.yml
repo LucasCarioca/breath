@@ -24,6 +24,7 @@ pipelines:
           - gcloud auth activate-service-account --key-file key.json
           - gcloud config set project multi-k8s-250201
           - gcloud config set compute/zone us-central1-a
+          - gcloud container clusters get-credentials multi-k8s
           # - gcloud container clusters get-credentials multi-cluster
           # - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
           # - chmod +x ./kubectl
