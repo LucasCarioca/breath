@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: k8s-ingress
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: breath-ui-ip
+    kubernetes.io/ingress.global-static-ip-name: breath-ip
     networking.gke.io/managed-certificates: breath-certificate
 spec:
   backend:
