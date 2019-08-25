@@ -13,20 +13,20 @@ pipelines:
         caches:
           - node
         script: 
+          # - echo $KEY_FILE > encoded-key.txt
+          # - base64 --decode encoded-key.txt > key.json
+          # - gcloud version || true
+          # - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+          # - source $HOME/google-cloud-sdk/path.bash.inc
+          # - gcloud version
+          # - gcloud components install kubectl
+          # - gcloud auth activate-service-account --key-file key.json
+          # - gcloud config set project multi-k8s-250201
+          # - gcloud config set compute/zone us-central1-a
+          # - gcloud container clusters get-credentials multi-k8s
           - SHA=$(git rev-parse HEAD)
-          - echo $KEY_FILE > encoded-key.txt
-          - base64 --decode encoded-key.txt > key.json
-          - gcloud version || true
-          - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
-          - source $HOME/google-cloud-sdk/path.bash.inc
-          - gcloud version
-          - gcloud components install kubectl
-          - gcloud auth activate-service-account --key-file key.json
-          - gcloud config set project multi-k8s-250201
-          - gcloud config set compute/zone us-central1-a
-          - gcloud container clusters get-credentials multi-k8s
           - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           - ./build.sh $SHA
-          - ./deploy.sh $SHA
+          # - ./deploy.sh $SHA
         services:
           - docker
