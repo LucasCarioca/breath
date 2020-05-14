@@ -31,4 +31,4 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy
-    - run: curl -X POST -d {} https://api.netlify.com/build_hooks/5ebda8eded34be8d98e30264
+      run: curl -X POST -d {} https://api.netlify.com/build_hooks/5ebda8eded34be8d98e30264
