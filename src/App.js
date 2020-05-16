@@ -15,6 +15,7 @@ import Routes from "./Routes";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
+import { Button } from '@material-ui/core';
 
 const store = createStore(reducer, composeWithDevTools());
 
@@ -41,6 +42,10 @@ function App() {
                 <Box height={'100%'}>
                     <Container maxWidth={'sm'}>
                         <Routes />
+                        <div className='legal-links-container'>
+                            <Button className='legal-links' component={Link} size={'small'} color={'default'} to='/privacypolicy'>Privacy policy</Button>
+                            <Button className='legal-links' component={Link} size={'small'} color={'default'} to='/termsofservice'>Terms of service</Button>
+                        </div>
                         <AppBar>
                             <BottomNavigation
                                 value={value}

@@ -1,0 +1,10 @@
+.legal-links-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 5px; 
+    right: 5px;
+}
+.legal-links {
+    margin: 5px;
+}
