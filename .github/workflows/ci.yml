@@ -37,4 +37,6 @@ jobs:
         NETLIFY_DEPLOY_TO_PROD: true
         build_directory: build
     - name: Create release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npm run release
