@@ -2,16 +2,20 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6d4bbf66-75d2-415d-ba23-0902ff975bdd/deploy-status)](https://app.netlify.com/sites/breathrate/deploys)
 
+![CD](https://github.com/LucasCarioca/breath/workflows/Node.js%20CI/badge.svg)
+
 ## Runing application locally
 
-### Basic run
+### Setup and run locally
 
 ~~~~bash
+npm install
 npm start
 ~~~~
 
 ### With Docker
 
 ~~~~bash
-./run.sh
+docker build -t breath
+docker run -p 3000:3000 breath
 ~~~~
