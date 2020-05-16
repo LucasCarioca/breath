@@ -36,3 +36,5 @@ jobs:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_DEPLOY_TO_PROD: true
         build_directory: build
+    - name: Create release
+      run: npm run release
