@@ -31,4 +31,9 @@ jobs:
     - name: Create release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npm run release
+      run: npm run release 
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ secrets.GITHUB_REF }}
+        path: build
