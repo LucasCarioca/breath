@@ -1,9 +1,13 @@
 .legal-links-container {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    bottom: 60px; 
-    right: 5px;
+    justify-content: center;
+}
+.legal-links-card {
+    max-width:20em;
+    margin: 0 auto;
+    margin-bottom: 500px;
+    text-align: center;
 }
 .legal-links {
     margin: 5px;
