@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/LucasCarioca/breath/compare/v0.4.0...v0.4.1) (2020-06-04)
+
+
+### Bug Fixes
+
+* Fixes the styling of the legal links - Resolves [#10](https://github.com/LucasCarioca/breath/issues/10) ([#14](https://github.com/LucasCarioca/breath/issues/14)) ([60f1251](https://github.com/LucasCarioca/breath/commit/60f125160c43ad2b789b37033cc9d124fe0c663f))
+
 # [0.4.0](https://github.com/LucasCarioca/breath/compare/v0.3.2...v0.4.0) (2020-06-04)
 
 
