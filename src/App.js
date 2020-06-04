@@ -17,6 +17,7 @@ import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import {Button, Card} from '@material-ui/core';
 import CardContent from "@material-ui/core/CardContent";
+import AppStoreSVG from "./assets/appstore.svg"
 
 const store = createStore(reducer, composeWithDevTools());
 
@@ -46,6 +47,9 @@ function App() {
                         <br/>
                         <Card raised={true} className={'legal-links-card'}>
                             <CardContent>
+                                <a href="https://apps.apple.com/us/app/count-my-breaths/id1513102381">
+                                    <img src={AppStoreSVG} alt="Download on the Apple app store"/>
+                                </a>
                                 <p>Copyright &copy; 2020 Lucas Desouza</p>
                                 <div className='legal-links-container'>
                                     <Button className='legal-links' component={Link} size={'small'} color={'default'}
