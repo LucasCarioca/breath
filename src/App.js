@@ -48,9 +48,9 @@ function App() {
                             <CardContent>
                                 <p>Copyright &copy; 2020 Lucas Desouza</p>
                                 <div className='legal-links-container'>
-                                    <Button className='legal-links' component={Link} size={'small'} color={'default'}
+                                    <Button className='legal-links' component={Link} size={'small'} color={'secondary'}
                                             to='/privacypolicy'>Privacy policy</Button>
-                                    <Button className='legal-links' component={Link} size={'small'} color={'default'}
+                                    <Button className='legal-links' component={Link} size={'small'} color={'secondary'}
                                             to='/termsofservice'>Terms of service</Button>
                                 </div>
                             </CardContent>
