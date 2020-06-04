@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/LucasCarioca/breath/compare/v0.3.2...v0.4.0) (2020-06-04)
+
+
+### Features
+
+* Adds app store link to the app ([#11](https://github.com/LucasCarioca/breath/issues/11)) ([2cad7b9](https://github.com/LucasCarioca/breath/commit/2cad7b9ca971487cbdf6474ef907b36ce41f7255)), closes [#8](https://github.com/LucasCarioca/breath/issues/8)
+
 ## [0.3.2](https://github.com/LucasCarioca/breath/compare/v0.3.1...v0.3.2) (2020-05-31)
 
 
