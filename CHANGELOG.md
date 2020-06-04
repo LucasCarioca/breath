@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/LucasCarioca/breath/compare/v0.4.1...v0.4.2) (2020-06-04)
+
+
+### Bug Fixes
+
+* update deps ([#16](https://github.com/LucasCarioca/breath/issues/16)) ([87c9c74](https://github.com/LucasCarioca/breath/commit/87c9c7453ce7f173c5050a95dd461a66c7953deb))
+
 ## [0.4.1](https://github.com/LucasCarioca/breath/compare/v0.4.0...v0.4.1) (2020-06-04)
 
 
