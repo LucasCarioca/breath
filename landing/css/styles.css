@@ -7414,3 +7414,11 @@ form .row:first-child .floating-label-form-group {
 
 .btn-social {
   margin-bottom: 0.5rem; }
+
+.margin-sm {
+  margin: .5rem;
+}
+
+.card-sm {
+  width: 50rem;
+}
