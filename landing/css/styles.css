@@ -7293,23 +7293,23 @@ h3 {
     .masthead .masthead-subheading {
       font-size: 1.5rem; } }
 
-.portfolio .portfolio-item {
+.theapp .portfolio-item {
   cursor: pointer;
   position: relative;
   display: block;
   max-width: 25rem;
   border-radius: 0.5rem;
   overflow: hidden; }
-  .portfolio .portfolio-item .portfolio-item-caption {
+  .theapp .portfolio-item .portfolio-item-caption {
     position: absolute;
     top: 0;
     left: 0;
     transition: all 0.2s ease-in-out;
     opacity: 0;
     background-color: rgba(44, 62, 80, 0.9); }
-    .portfolio .portfolio-item .portfolio-item-caption:hover {
+    .theapp .portfolio-item .portfolio-item-caption:hover {
       opacity: 1; }
-    .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
+    .theapp .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
       font-size: 1.5rem; }
 
 .portfolio-modal .portfolio-modal-title {
@@ -7385,7 +7385,7 @@ form .row:first-child .floating-label-form-group {
 #brandImage {
   height: 2rem; }
 
-.portfolio {
+.theapp {
   padding-top: 6rem;
   padding-bottom: 4.5rem; }
 
