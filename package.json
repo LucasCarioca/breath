@@ -13,15 +13,17 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
     "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
+    "redux-devtools-extension": "^2.13.8",N
     "tiny-timer": "^1.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npx serve -s landing & react-scripts start",
+    "start:app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "start:landing": "nxp serve -s landing"
   },
   "eslintConfig": {
     "extends": "react-app"
