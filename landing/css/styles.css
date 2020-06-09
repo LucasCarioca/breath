@@ -10775,7 +10775,7 @@ form .row:first-child .floating-label-form-group {
 
 .about-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .about-text {
@@ -10784,7 +10784,9 @@ form .row:first-child .floating-label-form-group {
 }
 
 .about-image {
-
+    width: 20rem;
+    margin: 2rem auto;
+    border-radius: 100rem;
 }
 
 .page-section-heading {
@@ -10825,4 +10827,5 @@ form .row:first-child .floating-label-form-group {
 
 .card-sm {
     width: 50rem;
+    max-width: 80vw;
 }
