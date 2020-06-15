@@ -1,3 +1,13 @@
+# [1.0.0](https://github.com/LucasCarioca/breath/compare/v0.4.2...v1.0.0) (2020-06-09)
+
+
+* Landingpage (#24) ([6cadf49](https://github.com/LucasCarioca/breath/commit/6cadf49e86cb64fa2be3ca23ef811340786bf3d4)), closes [#24](https://github.com/LucasCarioca/breath/issues/24)
+
+
+### BREAKING CHANGES
+
+* restructure app pages and urls
+
 ## [0.4.2](https://github.com/LucasCarioca/breath/compare/v0.4.1...v0.4.2) (2020-06-04)
 
 
