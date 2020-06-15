@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/LucasCarioca/breath/compare/v1.0.0...v1.1.0) (2020-06-15)
+
+
+### Features
+
+* **landing:** adds contact form ([b283433](https://github.com/LucasCarioca/breath/commit/b283433e2e27e60a96502704eea4e90a698e66b2))
+
 # [1.0.0](https://github.com/LucasCarioca/breath/compare/v0.4.2...v1.0.0) (2020-06-09)
 
 
