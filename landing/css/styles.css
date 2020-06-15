@@ -10829,3 +10829,25 @@ form .row:first-child .floating-label-form-group {
     width: 50rem;
     max-width: 80vw;
 }
+
+.contact-input {
+    width: 80vw;
+}
+
+@media (min-width: 576px) {
+    .contact-input {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-input {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-input {
+        width: 40vw;
+    }
+}
