@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/LucasCarioca/breath/compare/v1.1.1...v1.1.2) (2020-07-01)
+
+
+### Bug Fixes
+
+* Bump websocket-extensions from 0.1.3 to 0.1.4 ([#26](https://github.com/LucasCarioca/breath/issues/26)) ([afa62c7](https://github.com/LucasCarioca/breath/commit/afa62c7c3cdf4b25d0278ea1d91d1f558ebaddc4))
+
 ## [1.1.1](https://github.com/LucasCarioca/breath/compare/v1.1.0...v1.1.1) (2020-07-01)
 
 
