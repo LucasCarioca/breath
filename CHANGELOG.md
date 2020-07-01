@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/LucasCarioca/breath/compare/v1.1.0...v1.1.1) (2020-07-01)
+
+
+### Bug Fixes
+
+* **analytics:** track conversion rate ([#25](https://github.com/LucasCarioca/breath/issues/25)) ([f122153](https://github.com/LucasCarioca/breath/commit/f122153a31babd5ebf9d5f9862a2395bd0fc2d85))
+
 # [1.1.0](https://github.com/LucasCarioca/breath/compare/v1.0.0...v1.1.0) (2020-06-15)
 
 
