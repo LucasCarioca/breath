@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/LucasCarioca/breath/compare/v1.1.2...v1.1.3) (2020-07-07)
+
+
+### Bug Fixes
+
+* Bump npm from 6.14.5 to 6.14.6 ([#27](https://github.com/LucasCarioca/breath/issues/27)) ([38effda](https://github.com/LucasCarioca/breath/commit/38effdab6c560f94e72dd81fda747241027d12ef))
+
 ## [1.1.2](https://github.com/LucasCarioca/breath/compare/v1.1.1...v1.1.2) (2020-07-01)
 
 
