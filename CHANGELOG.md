@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/LucasCarioca/breath/compare/v1.1.3...v1.2.0) (2020-08-09)
+
+
+### Features
+
+* **app-links:** adds google play link ([#30](https://github.com/LucasCarioca/breath/issues/30)) ([0984377](https://github.com/LucasCarioca/breath/commit/0984377bf6be203021b9904da3ee51f324479e29))
+
 ## [1.1.3](https://github.com/LucasCarioca/breath/compare/v1.1.2...v1.1.3) (2020-07-07)
 
 
