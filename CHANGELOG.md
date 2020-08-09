@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/LucasCarioca/breath/compare/v1.2.0...v1.2.1) (2020-08-09)
+
+
+### Bug Fixes
+
+* **pipeline:** fix issues with the build ([#31](https://github.com/LucasCarioca/breath/issues/31)) ([eec69fb](https://github.com/LucasCarioca/breath/commit/eec69fb39c358dfc438dd7a62b8486929c91e1a0))
+
 # [1.2.0](https://github.com/LucasCarioca/breath/compare/v1.1.3...v1.2.0) (2020-08-09)
 
 
