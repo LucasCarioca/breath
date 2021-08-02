@@ -2,13 +2,13 @@ name: Realease new version
 on:
   release:
     types: [published]
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-  VERSION: ${{ github.event.release.tag_name }}
 jobs:
   build-release:
     runs-on: ubuntu-latest
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
+      VERSION: ${{ github.event.release.tag_name }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
