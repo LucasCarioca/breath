@@ -56,9 +56,6 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
-      
-      - name: Test Kubeconfig
-        run: kubectl get nodes
 
       - name: Deploy application
         run: kubectl apply -f deployment.yaml
