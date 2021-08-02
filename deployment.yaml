@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: breath-landing
-          image: ghcr.io/LucasCarioca/breath:latest
+          image: ghcr.io/lucascarioca/breath:latest
           ports:
             - containerPort: 80
 ---
