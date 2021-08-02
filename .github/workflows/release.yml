@@ -55,7 +55,10 @@ jobs:
         uses: azure/k8s-set-context@v1
         with:
           method: kubeconfig
-          kubeconfig: <your kubeconfig>
+          kubeconfig: ${{ secrets.KUBE_CONFIG }}
       
       - name: Test Kubeconfig
         run: kubectl get nodes
+
+      - name: Deploy application
+        run: kubectl apply -f deployment.yaml
