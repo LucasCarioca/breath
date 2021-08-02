@@ -13,6 +13,16 @@ npm install
 npm start
 ~~~~
 
+To start the app or landing page on their own.
+
+~~~~bash
+npm start:landing
+
+# or
+
+npm start:app
+~~~~
+
 ### With Docker
 
 ~~~~bash
