@@ -38,3 +38,26 @@ spec:
     - name: tcp
       port: 80
       targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: breath-landing-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
+spec:
+  tls:
+  - hosts:
+    - breath.ldkube.io
+    secretName: breath-landing-tls
+  rules:
+  - host: breath.ldkube.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+            service:
+              name: breath-landing-cluster-ip
+              port: 
+                number: 80
