@@ -19,7 +19,6 @@ spec:
           image: ghcr.io/LucasCarioca/breath:latest
           ports:
             - containerPort: 80
-              name: breath-landing-port
 ---
 apiVersion: v1
 kind: Service
@@ -29,4 +28,4 @@ spec:
   ports:
     - name: tcp
       port: 80
-      targetPort: breath-landing-port
+      targetPort: 80
