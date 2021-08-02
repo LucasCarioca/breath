@@ -1,11 +1,6 @@
-name: CICD
+name: netlify release
 on:
-  push:
-    branches: 
-    - 'master' 
-  pull_request:
-    branches:
-    - 'master'
+  workflow-dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
