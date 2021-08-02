@@ -4,12 +4,11 @@ on:
     types: [published]
 env: 
   VERSION: ${{ github.event.release.tag_name }}
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 jobs:
   build-release:
     runs-on: ubuntu-latest
-    env:
-      REGISTRY: ghcr.io
-      IMAGE_NAME: ${{ github.repository }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -57,5 +56,8 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
 
-      - name: Deploy application
+      - name: Deploy Application
         run: kubectl apply -f deployment.yaml
+
+      - name: Set Image
+        run: kubectl set image deployments/breath-landing breath-landing=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
