@@ -60,4 +60,4 @@ jobs:
         run: kubectl apply -f deployment.yaml
 
       - name: Set Image
-        run: kubectl set image deployments/breath-landing -n breath breath-landing=${{ env.REGISTRY }}/${{ lowercase(env.IMAGE_NAME) }}:${{ env.VERSION }}
+        run: kubectl set image deployments/breath-landing -n breath breath-landing=ghcr.io/lucascarioca/breath:${{ env.VERSION }}
