@@ -7,3 +7,6 @@ jobs:
       - uses: actions/checkout@v2
       - id: foo
         uses: LucasCarioca/docker-multi-arch@v0
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
