@@ -57,7 +57,7 @@ jobs:
           kubeconfig: ${{ secrets.KUBE_CONFIG }}
 
       - name: Deploy Application
-        run: kubectl apply -f deployment.yaml
+        run: kubectl apply -f deployment-homelab.yaml
 
       - name: Set Image
         run: kubectl set image deployments/breath-landing -n breath breath-landing=ghcr.io/lucascarioca/breath:${{ env.VERSION }}
