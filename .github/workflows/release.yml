@@ -54,10 +54,10 @@ jobs:
         uses: azure/k8s-set-context@v1
         with:
           method: kubeconfig
-          kubeconfig: ${{ secrets.KUBE_CONFIG }}
+          kubeconfig: ${{ secrets.HOME_LAB_KUBE_CONFIG }}
 
       - name: Deploy Application
         run: kubectl apply -f deployment-homelab.yaml
 
       - name: Set Image
-        run: kubectl set image deployments/breath-landing -n breath breath-landing=ghcr.io/lucascarioca/breath:${{ env.VERSION }}
+        run: kubectl set image deployments/breath-deployment -n breath breath=ghcr.io/lucascarioca/breath:${{ env.VERSION }}
