@@ -28,7 +28,7 @@ metadata:
   name: breath-service
 spec:
   type: LoadBalancer
-  loadBalancerIP: 192.168.1.156
+  loadBalancerIP: 10.10.0.216
   selector:
     app: breath
   ports:
