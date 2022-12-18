@@ -5,7 +5,7 @@ jobs:
   release:
     if: github.ref == 'refs/heads/main'
     needs: [ci]
-    uses: LucasCarioca/workflows/.github/workflows/release-docker.yml@v0.9.9
+    uses: LucasCarioca/workflows/.github/workflows/release-docker.yml@v0.10.1
     with:
       registry: ghcr.io
       image_name: lucascarioca/breath
