@@ -1,3 +1,13 @@
+## [1.2.17](https://github.com/LucasCarioca/breath/compare/v1.2.16...v1.2.17) (2022-12-18)
+
+
+### Bug Fixes
+
+* remove deps ([a8f22b3](https://github.com/LucasCarioca/breath/commit/a8f22b36735ade2c062d51846f22ebc491c0f4ed))
+* update branch ([bdff6be](https://github.com/LucasCarioca/breath/commit/bdff6be05ab77e9964f9ba8a5b2494110d4f2bf5))
+* update workflow version ([eadade6](https://github.com/LucasCarioca/breath/commit/eadade63f845a87228f285424691a9cda89a7650))
+* update workflows ([962747f](https://github.com/LucasCarioca/breath/commit/962747f48349648a05fecb11e21ed0fba5463ae0))
+
 ## [1.2.1](https://github.com/LucasCarioca/breath/compare/v1.2.0...v1.2.1) (2020-08-09)
 
 
